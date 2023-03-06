@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신한금융지주</title>
-    <!-- common.css -->
-    <link rel="stylesheet" href="./css/common.css" type="text/css">
-    <!-- base.css -->
-    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- bootstrap js -->
@@ -18,7 +15,10 @@
 
     <!-- reset.css -->
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
-
+    <!-- common.css -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <!-- base.css -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
     <!-- common.js -->
     <script src="./js/common.js" defer></script>
 </head>
@@ -101,7 +101,7 @@
             <span></span>
         </div>
         <nav class="gnb_toggle">
-            <ul class="depth_01">
+            <ul class="depth_01 d-flex">
                 <li>
                     <a href="#" title="회사소개">회사소개</a>
                     <ul class="depth_02">
@@ -278,7 +278,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" title="ESG 정보"></a>
+                            <a href="#" title="ESG 정보">ESG 정보</a>
                             <ul class="depth_03">
                                 <li><a href="#" title="중대성 평가">중대성 평가</a></li>
                                 <li><a href="#" title="이해관계자 참여">이해관계자 참여</a></li>
@@ -334,7 +334,7 @@
             <div class="wrap row">
                 <div class="col">
                     <nav class="footer_menu">
-                        <ul class="d-flex">
+                        <ul class="d-flex align-items-center">
                             <li>
                                 <a href="#" title="개인정보처리방침">개인정보처리방침</a>
                             </li>
@@ -356,7 +356,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-3 justify-content-end">
+                <div class="col-3 d-flex justify-content-end align-items-center">
                     <select name="family_site" id="family_site" class="d-block">
                         <option value="">Family_Site</option>
                         <option value="#">Family_Site</option>
@@ -369,25 +369,25 @@
         </div>
         <div class="wrap row">
             <address class="footer_bottom row">
-                <h2 class="footer_logo col">
+                <h2 class="footer_logo col-2">
                     <a href="index.html" title="메인페이지로 이동">
-                        <img src="./images/logo_white.png" alt="신한금융지주회사 로고">
+                        <img src="./images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
                     </a>
                 </h2>
-                <ul class="col-2 d-flex">
+                <ul class="col-2 d-flex ms-auto">
                     <li>
-                        <a href="#" title="트위터">
-                            <img src="" alt="트위터">
+                        <a href="#" title="인스타그램">
+                            <img src="./images/instagram.png" alt="인스타그램">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="페이스북">
-                            <img src="" alt="페이스북">
+                            <img src="./images/facebook.png" alt="페이스북">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="" alt="인스타그램">
+                            <img src="./images/youtube.png" alt="인스타그램">
                         </a>
                     </li>
                 </ul>
