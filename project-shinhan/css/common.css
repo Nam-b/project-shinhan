@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* header */
+.d-flex{
+    transition: 0.5s;
+}
+header {
+    position:fixed;
+    width:calc(100% - 101px);
+    height:100px;
+    background:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+header::after {
+    content:'';
+    display:block;
+    width:calc(100% + 101px);
+    height:0;
+
+    position:absolute;
+    top:101px;
+    left:0;
+
+    background:#fff url('../images/gnb_img.png') no-repeat left bottom;
+    /* background-size: 400px; */
+
+    transition:0.5s;
+}
+
+header h1 {
+    position:absolute;
+    left:40px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+header h1 a {
+    display:block;
+    background: none;
+}
+
+header h1 a img {
+    opacity:1;
+}
+
+header .gnb {
+    position:absolute;
+    right:145px;
+
+    width:800px;
+    transition:0.5s;
+    z-index:100;
+}
+
+header .gnb .depth_01 > li {
+    position:relative;
+
+    padding:0 20px;
+    text-align: center;
+    transition:0.5s;
+}
+
+header .gnb .depth_01 > li > a,
+header .language a  {
+    line-height:100px;
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+}
+
+header .gnb .depth_02 {
+    position:absolute;
+    top:101px;
+    left:0;
+
+    width:100%;
+    height:0;
+    padding-top:20px;
+
+    text-align: center;
+    overflow:hidden;
+
+    transition: 0.5s;
+}
+
+header .gnb .depth_02 li a {
+    position:relative;
+
+    line-height:40px;
+    font-size:16px;
+    color:#666;
+    opacity:0;
+}
+
+header .language {
+    position:relative;
+
+    margin-left:10px;
+    padding:0 60px 0 30px;
+}
+
+header .language::before {
+    content:'';
+    display:block;
+    height:30px;
+    width:1px;
+
+    position:absolute;
+    left:0px;
+    top:35px;
+    
+    background:#fff;
+}
+
+header .language::after {
+    content:url('../images/arrow_white.png');
+    display:block;
+
+    position:absolute;
+    right:35px;
+    top:40px;
+}
+
+
+
+/* header - hover */
+
+header.active {
+    height:100px;
+    background:#fff;
+}
+
+header.active::after {
+    border-top:1px solid rgba(0, 70, 255, 0.5);
+    height:387px;
+}
+
+header.active h1 a {
+    background: url('../images/logo_blue.png') no-repeat center center;
+}
+header.active h1 a img {
+    opacity:0;
+}
+
+header.active .gnb .depth_01 > li:hover > a {
+    color:#0046FF;
+}
+
+header.active .gnb .depth_01 > li:hover > ul {
+    background:#F5F8FE;
+    border-top:1px solid rgba(0, 70, 255, 0.5);
+}
+
+header.active .gnb .depth_02 {
+    height:387px;
+    top:101px;
+}
+
+header.active .gnb .depth_02 li a {
+    opacity:1;
+}
+
+header.active .gnb .depth_02 li a:hover::after {
+    content:'';
+    display:block;
+    width:100%;
+    height:5px;
+
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    
+    background:rgba(0, 70, 255, 0.5);
+}
+
+header.active .gnb {
+    right:calc(50% - 500px);
+    width:900px;
+}
+
+header.active .gnb .depth_01 > li {
+    width:180px;
+}
+
+header.active .gnb .depth_01 > li > a,
+header.active .language a {
+    color:#333;
+}
+
+header.active .language::before {
+    background:#333;
+}
+
+header.active .language::after {
+    content:url(../images/arrow_black.png);
+}
+
+header.active + aside .gnb_toggle_btn {
+    background:#fff;
+}
+
+header.active + aside .gnb_toggle_btn::before {
+    background:rgba(0, 70, 255, 0.5);
+}
+
+
+
+/* aside toggle */
+
+.gnb_toggle_btn {
+    position:fixed;
+    top:0;
+    right:0;
+    z-index: 100;
+    width:100px;
+    height:100px;
+    margin-left: 10px;
+    border-left:1px solid rgba(255,255,255,0.5);
+    background:rgba(0,0,0,0.5);
+
+    cursor: pointer;
+}
+
+.gnb_toggle_btn span {
+    position:absolute;
+    top:calc(50% - 1px);
+    left:30px;
+    
+    display:block;
+    width:40px;
+    height:2px;
+    background:#fff;
+}
+
+.gnb_toggle_btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.gnb_toggle_btn span:nth-child(2) {
+    transform: translateY(0);
+}
+
+.gnb_toggle_btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.gnb_toggle {
+    position:fixed;
+    right:-100%;
+
+    width:100%;
+    height:100vh;
+    background:#1E3063;
+}
+
+
+
+
+
+
+
