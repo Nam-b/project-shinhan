@@ -10,7 +10,7 @@ a {
     text-decoration: none !important;
 }
 
-div.wrap {
+.wrap {
     max-width:1420px;
     width:100%;
     min-width:1420px;

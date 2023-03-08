@@ -249,6 +249,7 @@ header.active .language::after {
     background:#1E3063;
 
     transition:0.5s;
+    z-index:500;
 }
 
 header.active + aside .gnb_toggle_btn {
@@ -345,10 +346,6 @@ body.toggle_on .gnb_toggle {
 
 
 
-main {
-    height:100vh;
-    background:#e1e1e1;
-}
 
 
 /* footer */

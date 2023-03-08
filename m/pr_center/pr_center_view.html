@@ -14,22 +14,85 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!-- reset.css -->
-    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <!-- common.css -->
-    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
     <!-- base.css -->
-    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
     <!-- common.js -->
-    <script src="./js/common.js" defer></script>
+    <script src="../js/common.js" defer></script>
 </head>
 <body>
     <header class="d-flex align-items-center">
         <h1>
             <a href="./index.html" title="메인페이지 이동">
-                <img src="./images/logo_white.png" alt="신한금융지주회사 로고">
+                <img src="../images/logo_white.png" alt="신한금융지주회사 로고">
             </a>
         </h1>
-        
+        <nav class="gnb">
+            <ul class="depth_01 d-flex justify-content-end">
+                <li>
+                    <a href="#" title="회사소개">회사소개</a>
+                    <ul class="depth_02">
+                        <li><a href="#" title="신한WAY 2.0">신한WAY 2.0</a></li>
+                        <li><a href="#" title="CEO">CEO</a></li>
+                        <li><a href="#" title="연혁">연혁</a></li>
+                        <li><a href="#" title="지주회사 조직도">지주회사 조직도</a></li>
+                        <li><a href="#" title="그룹회사소개">그룹회사소개</a></li>
+                        <li><a href="#" title="윤리경영">윤리경영</a></li>
+                        <li><a href="#" title="CI">CI</a></li>
+                        <li><a href="#" title="회사위치">회사위치</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="기업지배구조">기업지배구조</a>
+                    <ul class="depth_02">
+                        <li><a href="#" title="주주현황">주주현황</a></li>
+                        <li><a href="#" title="주주총회">주주총회</a></li>
+                        <li><a href="#" title="이사회">이사회</a></li>
+                        <li><a href="#" title="관련규정">관련규정</a></li>
+                        <li><a href="#" title="이사회공시">이사회공시</a></li>
+                        <li><a href="#" title="기타">기타</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="IR투자자정보">IR투자자정보</a>
+                    <ul class="depth_02">
+                        <li><a href="#" title="Overview">Overview</a></li>
+                        <li><a href="#" title="공시정보">공시정보</a></li>
+                        <li><a href="#" title="재무정보">재무정보</a></li>
+                        <li><a href="#" title="주가정보">주가정보</a></li>
+                        <li><a href="#" title="IR일정">IR일정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="ESG">ESG</a>
+                    <ul class="depth_02">
+                        <li><a href="#" title="ESG 추진체계">ESG 추진체계</a></li>
+                        <li><a href="#" title="ESG 경영">ESG 경영</a></li>
+                        <li><a href="#" title="ESG 성과">ESG 성과</a></li>
+                        <li><a href="#" title="ESG Reporting">ESG Reporting</a></li>
+                        <li><a href="#" title="ESG 정보"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="PR센터">PR센터</a>
+                    <ul class="depth_02">
+                        <li><a href="#" title="보도자료">보도자료</a></li>
+                        <li><a href="#" title="주요수상내역">주요수상내역</a></li>
+                        <li><a href="#" title="그룹광고">그룹광고</a></li>
+                        <li><a href="#" title="그룹 캐릭터 소개">그룹 캐릭터 소개</a></li>
+                        <li><a href="#" title="스포츠 스폰서십">스포츠 스폰서십</a></li>
+                        <li><a href="#" title="신한인">신한인</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <ul class="language ms-auto">
+            <li><a href="#" title="KOR">KOR</a></li>
+            <!-- <li><a href="#" title="EN">EN</a></li>
+            <li><a href="#" title="JP">JP</a></li> -->
+        </ul>
     </header>
     <aside>
         <div class="gnb_toggle_btn">
@@ -38,16 +101,7 @@
             <span></span>
         </div>
         <nav class="gnb_toggle">
-            <div class="gnb_top d-flex align-items-center">
-                <input type="search" name="search" id="search" placeholder="검색어를 입력하세요">
-                <ul class="language ms-auto">
-                    <li><a href="#" title="KOR">KOR</a></li>
-                    <!-- <li><a href="#" title="EN">EN</a></li>
-                    <li><a href="#" title="JP">JP</a></li> -->
-                </ul>
-            </div>
-
-            <ul class="depth_01">
+            <ul class="depth_01 d-flex">
                 <li>
                     <a href="#" title="회사소개">회사소개</a>
                     <ul class="depth_02">
@@ -273,75 +327,129 @@
         </nav>
     </aside>
     <main>
+        <link rel="stylesheet" href="./css/pr_center_view.css" type="text/css">
+        <section class="spot_visual">
+            <div class="typo">
+                <h2>PR센터</h2>
+                <p>
+                    신한금융그룹의 새로운 소식과 그룹사들의
+                    <br>
+                    다양한 활동을 전해드립니다.
+                </p>
+            </div>
 
+            <nav class="lnb_depth_02">
+                <ul class="d-flex">
+                    <li class="on">
+                        <a href="#" title="보도자료">보도자료</a>
+                    </li>
+                    <li>
+                        <a href="#" title="주요수상내역">주요수상내역</a>
+                    </li>
+                    <li>
+                        <a href="#" title="그룹광고">그룹광고</a>
+                    </li>
+                    <li>
+                        <a href="#" title="그룹캐릭터소개">그룹캐릭터소개</a>
+                    </li>
+                    <li>
+                        <a href="#" title="스포츠스폰서십">스포츠스폰서십</a>
+                    </li>
+                    <li>
+                        <a href="#" title="신한인">신한인</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="content_title wrap">
+            <nav class="lnb_depth_03">
+                <ul class="d-flex justify-content-end">
+                    <li class="on">
+                        <a href="#" title="테스트1">테스트1</a>
+                    </li>
+                    <li>
+                        <a href="#" title="테스트2">테스트2</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3>보도자료</h3>
+        </section>
+
+
+        <section class="content_start wrap row justify-content-center">
+            <article class="col-10 d-flex align-items-center justify-content-between news_title">
+                <h4>신한금융그룹, 59번째 희망영웅상 전달식 진행</h4>
+                <span class="date">2017.09.04</span>
+            </article>
+            
+        </section>
+
+        
     </main>
     <footer>
         <div class="footer_top">
-            <a href="../www/index.html" title="pc 메인페이지로 이동" class="pc_btn">
-                PC 보기
-            </a>
-            <div class="wrap">
-                <div>
+            <div class="wrap row">
+                <div class="col">
                     <nav class="footer_menu">
-                        <ul class="row">
-                            <li class="col-6">
+                        <ul class="d-flex align-items-center">
+                            <li>
                                 <a href="#" title="개인정보처리방침">개인정보처리방침</a>
                             </li>
-                            <li class="col-6">
+                            <li>
                                 <a href="#" title="고객정보취급방침">고객정보취급방침</a>
                             </li>
-                            <li class="col-6">
+                            <li>
                                 <a href="#" title="신용정보활용체제">신용정보활용체제</a>
                             </li>
-                            <li class="col-6">
+                            <li>
                                 <a href="#" title="회사위치">회사위치</a>
                             </li>
-                            <li class="col-6">
+                            <li>
                                 <a href="#" title="신한지킴이">신한지킴이</a>
                             </li>
-                            <li class="col-6">
+                            <li>
                                 <a href="#" title="SITEMAP">SITEMAP</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <select name="family_site" id="family_site" class="d-block">
-                    <option value="">Family_Site</option>
-                    <option value="#">Family_Site</option>
-                    <option value="#">Family_Site</option>
-                    <option value="#">Family_Site</option>
-                    <option value="#">Family_Site</option>
-                </select>
+                <div class="col-3 d-flex justify-content-end align-items-center">
+                    <select name="family_site" id="family_site" class="d-block">
+                        <option value="">Family_Site</option>
+                        <option value="#">Family_Site</option>
+                        <option value="#">Family_Site</option>
+                        <option value="#">Family_Site</option>
+                        <option value="#">Family_Site</option>
+                    </select>
+                </div>
             </div>
         </div>
-        <div class="wrap">
-            <address class="footer_bottom d-flex flex-wrap">
-                <h2 class="footer_logo">
+        <div class="wrap row">
+            <address class="footer_bottom row">
+                <h2 class="footer_logo col-2">
                     <a href="index.html" title="메인페이지로 이동">
-                        <img src="./images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
+                        <img src="../images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
                     </a>
                 </h2>
-                <ul class="d-flex ms-auto">
+                <ul class="col-2 d-flex ms-auto">
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="./images/instagram.png" alt="인스타그램">
+                            <img src="../images/instagram.png" alt="인스타그램">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="페이스북">
-                            <img src="./images/facebook.png" alt="페이스북">
+                            <img src="../images/facebook.png" alt="페이스북">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="./images/youtube.png" alt="인스타그램">
+                            <img src="../images/youtube.png" alt="인스타그램">
                         </a>
                     </li>
                 </ul>
                 <p>
-                    서울특별시 중구 세종대로 9길 20 (태평로 2가 120) 
-                    <br>
-                    대경빌딩(신한은행 본점) 16층/17층
+                    서울특별시 중구 세종대로 9길 20 (태평로 2가 120) 대경빌딩(신한은행 본점) 16층/17층
                 </p>
             </address>
         </div>

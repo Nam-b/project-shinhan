@@ -10,11 +10,12 @@ a {
     text-decoration: none !important;
 }
 
-div.wrap {
+.wrap {
     max-width:768px;
     width:100%;
-    min-width:390px;
+    /* min-width:390px; */
 
     margin:0 auto;
     padding:0 25px;
+    box-sizing: border-box;
 }
