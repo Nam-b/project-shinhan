@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;margin: 0;
+    }
+    #modal{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.5);
+    }
+    #banner{
+      width: 450px;
+      position: absolute;
+      top: 50%;left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #banner img{
+      vertical-align: top;
+    }
+    #banner>p{
+      line-height: 50px;
+      background-color: #fff;
+      padding: 0px 20px;
+      position: relative;
+    }
+    #banner>p>input[type=button]{
+      position: absolute;
+      border: none;
+      line-height: 50px;
+      background: none;
+      right: 20px;
+    }
+  </style>
+  <!-- 제이쿼리 연결하기 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script>
+    $(function(){
+      let modal = `
+      <div id="modal">
+          <div id="banner">
+            <a href="#" title="채용공고"><img src="./images/Group 583.png" alt="채용공고"></a>
+            <!-- <a href="#" title="결산공고"><img src="./images/Group 584.png" alt="결산공고"></a> -->
+            <p>
+              <input type="checkbox" id="ch">
+              <label for="ch">일주일간 창 보지 않기</label>
+              <input type="button" value="닫기" id="m_close">
+            </p>
+          </div>
+        </div>`;
+        $('body').append(modal);
+        $('#modal>#banner>p>#m_close').click(function(){
+          $('#modal').hide();
+        });
+    });
+  </script>
+  <!-- 제이쿼리 쿠키 -->
+    <script src="./script/jquery.cookie.js" defer></script>
+    <script>
+      $(function(){
+        return false;
+        if($.cookie('popup')=='none'){//쿠키파일이 현재 브라우저에 저장되어있는지를 따져서 none이면 모달이 안나오게 한다.
+          $('#modal').hide();//보이지 않게 한다.
+      }
+
+      let ch = $('#ch');//체크박스 변수
+      //오늘 하루 열지 않음을 클릭시 쿠키가 생성이 되고 그렇지 않으면 그냥 모달을 숨기는 내용
+      function closePop(){
+        if(ch.is(':checked')){
+          $.cookie('popup','none',{expires:1,path:'/'});//쿠키를 생성한다.
+        }
+        $('.modal').hide();
+      }
+      $('#modal>#banner>p>label').click(function(){
+        closePop();
+      });
+      //닫기를 누르면 모달이 숨겨지도록 한다.
+      $('#modal>#banner>p>#m_close').click(function(){
+        if(ch.is(':checked')){
+          closePop();
+        }else
+        $('.modal').hide();
+      });
+      });
+    </script>
+</head>
+<body>
+</body>
+</html>
