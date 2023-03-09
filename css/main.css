@@ -284,6 +284,7 @@ font-weight:bold !important;
   overflow: hidden;
 }
 
+
 #intro:after{
   content:"";
   display:block;
@@ -303,7 +304,7 @@ font-weight:bold !important;
   background: rgba(0, 70, 255, 0.5);
   border-radius: 50%;
   z-index:-1000;
-  left:-80px;top:962px;
+  left:40px;top:940px;
 
 }
 
@@ -332,6 +333,10 @@ font-weight:bold !important;
 #intro .img_box01, .img_box02, .img_box03{
   width:580px; height:720px;
   position: relative;
+}
+
+#intro .img_wrap01 {
+  transform: translateY(-150px);
 }
 #intro .img_box01 img,.img_box02 img, .img_box03 img{
   width:580px; height:720px;
@@ -385,7 +390,7 @@ font-weight:bold !important;
     display:flex;
     justify-content: flex-start;
     overflow: hidden;
-    bottom:260px;
+    bottom:300px;
     z-index:-999;
     }
 
@@ -443,6 +448,7 @@ font-weight:bold !important;
       #invest{
         background-image:url(/img/investbg.jpg);
         background-size:cover;
+        background-attachment: fixed;
         width:100%;
         height:935px;
       }
@@ -689,6 +695,10 @@ font-weight:bold !important;
       }
       #board table tr td:last-child a:hover{
         color:#0046ff;
+      }
+
+      #board table{
+        margin-bottom:130px;
       }
 
 
