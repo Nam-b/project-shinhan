@@ -1,0 +1,699 @@
+@charset "utf-8";
+/* 영역확인 */
+/* #intro{
+  background-color: yellow;
+} */
+/* #intro .t_box {
+  background-color: aliceblue;
+} */
+
+
+/* 1.mslide 영역 */
+
+#mslide .banner_wrap{
+  position:relative;
+}
+#mslide .banner_box {
+  position:absolute;
+}
+
+#mslide .banner_box:first-of-type{
+  z-index:3;
+}
+#mslide .banner_box:nth-of-type(2){
+  z-index:2;
+}
+#m_slide .banner_box:last-of-type{
+  z-index:1;
+}
+.on{color:#fff !important;
+font-size:32px !important;
+font-weight:bold !important;
+}
+
+
+  /*  텍스트, 넘버박스, 아이콘, 버튼 */
+#mslide .t_box p{
+  color:#fff;
+  font-size:36px;
+  font-weight: bold;
+  letter-spacing: -3%;
+  padding-bottom:20px;
+}
+#mslide .t_box h2{
+  color:#fff;
+  font-size:80px;
+  font-weight:900;
+}
+
+#mslide .n_box{
+  padding:0px 0px 33px 36px;
+}
+
+#mslide .n_box>li{
+  font-size:24px;
+  color:#b2b2b2;
+  margin: 0px 22px 0px 0px;
+  cursor:pointer;
+}
+
+#mslide i{
+  cursor:pointer;
+}
+  
+#mslide .n_box, #mslide i,#mslide .cursor_box{
+  z-index:100;
+}
+/* 마우스 효과 */
+.scroll {
+  margin-top: 10px; /*글자와 마우스 간격*/
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 6px;
+  text-indent: 12px;
+  font-size: 8px; /*스크롤폰트 글자크기*/
+  /* text-align:center; */
+  color: #ffffff;
+  animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+}
+
+.mouse {
+  background: #ffffff linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
+  position: relative;
+  width: 39px !important;
+  height: 62px;
+  left:30px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+}
+.mouse:before, .mouse:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before {
+  width: 33px;
+  height: 58px;
+  background-color: #fff;
+  border-radius: 100px;
+}
+.mouse:after {
+  background-color: #222;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  animation: trackBallSlide 5s linear infinite;
+}
+
+@keyframes colorSlide {
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%, 100% {
+    background-color: #ffffff;
+  }
+}
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+}
+@keyframes nudgeMouse {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(8px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(8px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes colorText {
+  21% {
+    color: #4e5559;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #4e5559;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #4e5559;
+  }
+  90% {
+    color: #ffffff;
+  }
+}
+/* 2.신한소개 영역 */
+#intro{
+  overflow: hidden;
+}
+
+#intro:after{
+  content:"";
+  display:block;
+  position:absolute;
+  width:777px; height:777px;
+  background: rgba(0, 70, 255, 0.8);
+  border-radius: 50%;
+  top:-187px; right:-187px;
+  z-index: -1000;
+}
+
+#intro:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width:393px; height:393px;
+  background: rgba(0, 70, 255, 0.5);
+  border-radius: 50%;
+  z-index:-1000;
+  left:-80px;top:962px;
+
+}
+
+#intro .t_box{
+  height:256px;
+}
+
+#intro .t_box h2{
+  padding:120px 0px 20px 0px;
+  font-size:64px;
+  line-height: 82px;
+  letter-spacing: -3%;
+  font-weight: bold;
+
+}
+#intro .t_box h2 span{
+  color:#0046ff;
+}
+#intro.t_box p{
+  font-size:24px;
+  line-height: 36px;
+  color:#666;
+  letter-spacing: -3%;
+}
+
+#intro .img_box01, .img_box02, .img_box03{
+  width:580px; height:720px;
+  position: relative;
+}
+#intro .img_box01 img,.img_box02 img, .img_box03 img{
+  width:580px; height:720px;
+  cursor:pointer;
+}
+#intro .img_box01:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #0046ff;
+  top:10px;
+  right:20px;
+  z-index:-1;
+}
+
+
+#intro .t_box01 h3,.t_box02 h3,.t_box03 h3{
+  padding-top:10px;
+  font-size:36px;
+  font-weight: bold;
+}
+
+#intro .img_box02{
+  margin-top:120px;
+}
+
+#intro .img_box02:before,#intro .img_box03:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #0046ff;
+  top:10px;
+  right:-20px;
+  z-index:-1;
+}
+
+#intro .t_box02{
+  margin-bottom:190px;
+}
+#intro .t_box03{
+  margin-bottom: 122px;
+}
+
+/* marquee효과 */
+/* 오른쪽에서 왼쪽으로 흐르는 상자 */
+  .text-wrapper{
+    display:flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    bottom:260px;
+    z-index:-999;
+    }
+
+  .text-wrapper p{
+    font-size:200px;
+    text-transform: uppercase;
+    color:rgba(25,25,25,0.05);
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing:1px;
+    font-weight: 900;
+    animation: move-rtl 30s linear infinite;
+      }
+
+    @keyframes move-rtl{
+      0%{
+        transform:translateX(0);
+        }
+      100%{
+        transform:translateX(-100%);
+        }
+      }
+
+
+      /* 왼쪽에서 오른쪽으로 흐르는 상자 */
+    .text-wrapper2{
+      display:flex;
+      justify-content: flex-start;
+      overflow: hidden;
+      bottom:50px;
+      z-index:-999;
+    }
+
+    .text-wrapper2 p{
+      font-size:200px;
+      text-transform: uppercase;
+      color:rgba(25,25,25,0.05);
+      white-space: nowrap;
+      padding: 0 6rem;
+      letter-spacing:1px;
+      animation: move-ltr 30s linear infinite;
+      font-weight: 900;
+      }
+
+      @keyframes move-ltr{
+        0%{
+          transform:translateX(-100%);
+        }
+        100%{
+          transform:translateX(0%);
+        }
+      }
+
+      /* 3.IR투자자 영역 */
+      #invest{
+        background-image:url(/img/investbg.jpg);
+        background-size:cover;
+        width:100%;
+        height:935px;
+      }
+      #invest .wrap{
+        box-sizing: border-box;
+      }
+
+      #invest .con_wrap{
+        padding:120px 0px 73px 0px;
+      }
+
+      /* #invest .con_wrap{
+        justify-content: end;
+      } */
+      #invest .con_wrap h2{
+        color:#fff;
+        font-size:64px;
+        font-weight:900;
+        /* line-height:82px; */
+        letter-spacing: -3%;
+        margin-right:103px;
+      }
+
+      #invest .con_wrap p{
+        color:#fff;
+        font-size:24px;
+        line-height: 36px;
+        letter-spacing: -3%;
+      }
+      #invest .con_wrap a{
+        color:#fff ;
+        font-size:20px;
+        line-height:16px;
+        width:220px;
+        height:52px;
+        text-align:center;
+        padding-top:14px;
+        box-sizing: border-box;
+        border:1px solid #fff;
+        margin-left:240px;
+      }
+
+      #invest .box01{
+        height:500px;
+      }
+
+      #invest .box01{
+        padding:0px 0px 0px 20px;
+      }
+
+      #invest .box01 .t_wrap01{
+        background: #F5F8FE;
+        /* 박스 가로 사이징 */
+        width:460px;
+        height:500px;
+        padding:0px 40px 0px 40px;
+        box-sizing: border-box;
+      }
+      #invest .box02 >div{
+        width:460px;
+        background: #F5F8FE;
+        height:240px;
+      }
+
+
+      /* 텍스트 문구들  */
+      #invest .lred{
+        font-size:30px;
+        color:#ff0000;
+        border-radius: 2px;
+        padding:16px 0px 0px 100px;
+      }
+      #invest .sred{
+        font-size:20px;
+        color:#ff0000;
+        border-radius: 2px;
+        margin-left:12px;
+      }
+      #invest .lblue{
+        font-size:30px;
+        color:#0046ff;
+        border-radius: 2px;
+        margin:-3px 0px 0px 160px;
+      }
+      #invest .sblue{
+        font-size:20px;
+        color:#0046ff;
+        border-radius: 2px;
+      }
+      #invest .t_wrap01 p:first-of-type{
+        color:#191919;
+        font-size:24px;
+        padding-top:35px;
+        font-weight: bold;
+      }
+      #invest .t_wrap01 ul:first-of-type{
+        padding-top:23px;
+      }
+
+      #invest .t_wrap01 ul:first-of-type li:first-of-type{
+        font-size:36px;
+        font-weight: bold;
+        color:#333;
+      }
+      #invest .t_wrap01 ul:first-of-type li:last-of-type{
+        font-size:18px;
+        color:#191919;
+      }
+
+      #invest .t_wrap01 ul:nth-of-type(2) li:first-of-type{
+        font-size:48px;
+        color:#ff0000;
+        font-weight:bold;
+      }
+      #invest .t_wrap01 ul:nth-of-type(2) li:first-of-type span{
+        font-size:18px;
+        color:#333;
+        font-weight: normal !important;
+      }
+      #invest .t_wrap01 ul:nth-of-type(2) li:last-of-type{
+        font-size:24px;
+        font-weight:medium;
+        color:#333;
+        padding-top:22px;
+      }
+      #invest .t_wrap01 ul:nth-of-type(3) {
+        margin-top:20px;
+        margin-bottom: -1px;
+      }
+      #invest .t_wrap01 ul:nth-of-type(3) li{
+        font-size:18px;
+        color:#333;
+      }
+      #invest .t_wrap01 ul:nth-of-type(4){
+        border-bottom:1px solid #000;
+      }
+      #invest .t_wrap01 ul:nth-of-type(4) li{
+        font-size:18px;
+        color:#333;
+        padding-bottom:36px;
+      }
+      #invest .t_wrap01 .dot{
+        margin-top: 15px;
+        border:1px dashed #333;
+        width:102px;
+        height:0px;
+      }
+      #invest .t_wrap01 p:last-of-type{
+        font-size:24px;
+        font-weight: bold;
+        margin-top:35px;
+        margin-bottom: 0px;
+      }
+      #invest .t_wrap01 ul:last-of-type li:first-of-type{
+        font-size:30px;
+        color:#0046ff;
+        font-weight: bold;
+      }
+      #invest .t_wrap01 ul:last-of-type li:first-of-type span{
+        font-size:18px;
+        color:#333;
+        font-weight:normal;
+      }
+      #invest .t_wrap01 ul:last-of-type li:last-of-type{
+        font-size:24px;
+        color:#333;
+      }
+
+      #invest .t_wrap02{
+        padding:0px 40px;
+      }
+
+      /* 두번째박스 */
+      #invest .t_wrap02 h3{
+        font-size:24px;
+        font-weight: bold;
+        color:#191919;
+        padding:30px 0px 20px 0px ;
+      }
+      #invest .t_wrap02 tr td{
+        padding-bottom:20px;
+      }
+      #invest .t_wrap02 tr td:first-of-type{
+        font-size:14px;
+        color:#222;
+        font-weight:bold;
+      }
+      #invest .t_wrap02 tr td:last-of-type a{
+        font-size:14px;
+        font-weight: bold;
+        color:#222;
+      }
+      #invest .download{
+        text-align:center;
+      }
+      #invest .download i{
+        color:#0046ff;
+        font-size:14px;
+      }
+
+      /* 4.보도자료 영역 */
+      #board .t_box h2{
+        padding-top:107px;
+        font-size:64px;
+        font: weight 900px;
+        color:#333;
+        letter-spacing: -3%;
+      }
+      #board .t_box p {
+        padding:20px 0px 40px 0px;
+        font-size:24px;
+        line-height: 36px;
+        color:#333;
+      }
+      #board .t_box a{
+        font-size:20px;
+        padding:18px 63px;
+        border:1px solid #0046ff;
+      }
+      #board table{
+        margin-top:107px;
+        
+      }
+      #board table tr{
+        height:100px;
+        border-bottom: 1px solid #333;
+      }
+      #board table tr:first-child{
+        border-top: 5px solid #000;
+      }
+      #board table tr td:first-child{
+        width:120px;
+        text-align:center;
+        font-size:20px;
+        color:#666;
+        vertical-align: middle;
+      }
+      #board table tr td:last-child{
+        vertical-align: middle;
+        font-weight: bold;
+      }
+      #board table tr td:last-child a{
+        color:#333;
+      }
+      #board table tr td:last-child a:hover{
+        color:#0046ff;
+      }
+
+
+
+
+
+
+      
