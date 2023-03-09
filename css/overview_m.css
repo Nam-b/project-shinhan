@@ -10,8 +10,9 @@ a{
   display: none !important;
 }
 #ov_1, #ov_2, #ov_3{
-  max-width: 340px;
+  max-width: 768px;
   overflow: hidden;
+  margin: 0px 25px !important;
 }
 #ov_img{
   /* height: 720px; */
@@ -160,12 +161,14 @@ color: #666666;
 border-bottom: 1px solid #E1E1E1;
 line-height: 75px;
 }
+#ov_2>article>div>div>table>tbody td:last-of-type
+{text-align: right;}
 #ov_2>article>div>div>table>tbody td i{
   color: #0046FF;
   font-size: 20px;
 }
 #ov_3>article>button{
-  width: 340px;
+  width: 300px;
   height: 52px;
   background-color: #fff;
   border: 1px solid #0046FF;
