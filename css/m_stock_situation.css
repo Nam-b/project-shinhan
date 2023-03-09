@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* 메인 이미지 */
+main{
+
+
+}
+main>.head_top{
+  position: relative;
+  height: 720px;
+  
+}
+main>.head_top>img{
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+}
+/* 메인이미지 글씨 */
+main>.head_top>.m_juju1{
+  margin-left: 25px;
+  position: absolute;
+  bottom: 8%;
+  color: #fff;
+}
+main>.head_top>.m_juju1>h2{
+  position: relative;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+main>.head_top>.m_juju1>h2::after{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  
+  
+}
+main>.head_top>.m_juju1>p{
+  font-size: 17px;
+  line-height: 30px;
+}
+main>.m_juju1>.m_line{
+  border-bottom: 1px solid#fff;
+}
+/* 주주현황 셀렉트(수정예정) */
+.m_juju2{
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid#E1E1E1;
+  line-height: 50px;
+}
+.m_juju2 img{
+  transform: translateX(300px);
+  border-left: 1px solid#E1E1E1;
+}
+
+/* 주주분포 */
+.bun-po{
+  width: 340px;
+  margin: 80px auto ;
+}
+.bun-po h2{
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.bun-po p{
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* 그래프 css */
+.mo_chart_box{
+  width: 390px;
+  margin: 0px auto;
+}
+#mobileChart{
+  position: relative;
+  margin: 0px auto;
+
+}
+
+.bg_con{
+  position: absolute;
+  width: 100%;
+  height: 390px;
+  background: #F5F8FE;
+  z-index: -10;
+  top:940px;
+  left: 0px;
+}
+/* 주주현황 */
+.juju{
+  margin: 0px auto;
+  width: 390px;
+}
+.juju-date{
+  margin: 80px 0px 10px 27px;
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+}
+.juju-date>h2{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.juju-date>p{
+  font-size: 14px;
+  color: #999999;
+  margin-top: 30px;
+}
+/* 주주현황의 총주식 소유수 */
+.chong-jusik{
+  width: 340px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+  position: relative;
+  margin: 24px 20px 40px 60px;
+  display: flex;
+  text-align: center;
+}
+
+.chong-jusik>p:last-of-type{
+  font-size: 12px !important;
+  font-weight: bold;
+  transform: translate(10px,2px);
+
+}
+.bg_color2{
+  background-color: #D9D9D9;
+  width: 100%;
+  height: 58px;
+  z-index: -10;
+  position: absolute;
+  top: -20px;
+  left: -34px;
+}
+
+
+/* 테이블 부트스트랩 */
+.container-fluid{
+  width: 340px !important;
+  /* transform: translateX(36px); */
+  font-size: 16px;
+}
+.container-fluid .row{
+  line-height: 40px;
+  border-top: 2px solid#1e3063;
+  border-left: none;
+  border-right: none;
+}
+
+.container-fluid .row>.col-6{
+  border-bottom: 1px solid#e1e1e1;
+}
+.m_s{color: #333333;
+font-weight: bold;}
+.m_t{color: #666666;
+font-weight: bold;}
+
+/* 더보기버튼 */
+.hidden{
+  display: none;
+}
+#show-more-btn{
+  width: 160px;
+  height: 38px;
+  color: #0046ff;
+  border: 1px solid#0046ff;
+  text-align: center;
+  margin:20px auto 20px 80px;
+}

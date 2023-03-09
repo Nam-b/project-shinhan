@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/* 메인영역 */
+main>.head_top{
+  position: relative;
+  height: 720px;
+}
+main>.head_top>article{
+  margin-left: 250px;
+  position: absolute;
+  top: 40%;
+  color: #fff;
+}
+main>.head_top>article>h2+p{
+  
+  font-weight: bold;
+
+}
+main>.head_top>article>h2{
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 200px;
+}
+main>.head_top>article>p{
+  line-height: 35px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 헤더 gnb 영역 */
+main{}
+main>.bun-po{
+  width: 1420px;
+  margin: 0px auto;
+}
+.gnb_wrap{
+  display: flex;
+  transform: translateY(-60px);
+  margin-left: 200px;
+}
+.gnb_wrap li a{
+  transition: 0.2s;
+}
+.gnb_wrap li a:hover{
+  border-bottom: 5px solid#fff;
+  width: 98px;
+  
+}
+.gnb_wrap li a{
+  color: #fff !important;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.line{
+  width: 1420px;
+  border-bottom: 3px solid#666666;
+  margin-top: 35px;
+}
+/* 주주분포 */
+.sub_title>h2{
+  font-size: 52px;
+  margin:110px 0px 90px 0px;
+  font-weight: bold;
+}
+.sub_title>p{
+  font-size: 32px;
+  border-bottom: 40px;
+  font-weight: bold;
+}
+/* 오른쪽상단 a태그 */
+.sub_wrap{
+  display: flex;
+  justify-content: right;
+  
+}
+.sub_wrap>li{
+  margin:20px 0px 13px 0px;
+}
+.sub_wrap>li>a>span{
+  padding: 3px 10px 0px 10px;
+  font-size: 16px;
+  transform: translateY(2px);
+}
+.sub_wrap>li>a{
+  color: #222 !important;
+}
+
+
+/* 원형 도넛 */
+
+.graph_wrap{
+  width: 1200px;
+  margin: 90px auto 0px auto;
+  display: flex;
+  position: relative;
+  justify-content:center;
+}
+
+.zibun{
+  width: 400px;
+      display: flex;
+      transform: translate(1400px,150px);
+      
+}
+.zibun p{
+
+    transform: translateY(6px);
+  
+}
+.square{
+  width: 30px;height: 30px;
+  background-color: #F69F1B;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.square2{
+  width: 30px;height: 30px;
+  background-color: #0046FF;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.graph_wrap>.chartBox{
+  bottom: -140px;
+  position: relative;
+  margin: 0px 60px 0px 60px;
+}
+.bg_con{
+  position: absolute;
+  width: 1420px;
+  height: 596px;
+  background: #F5F8FE;
+  z-index: -10;
+}
+.chartBox{
+  width: 300px;
+}
+.chartBox p{
+  transform:translate(104px,-153px);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 주주현황 */
+.juju{
+  width: 1420px;
+  margin: 0px auto;
+  padding-top: 380px;
+  display: flex;
+}
+.juju-date>h2{
+  font-size: 45px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.juju-date>p{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 테이블 부트스트랩 */
+.container-fluid{
+  width: 1150px !important;
+  transform: translateX(36px);
+}
+.container-fluid>.row{
+  line-height: 50px;
+}
+.container-fluid .row:first-child{
+  border: 2px solid#1e3063;
+  border-left: none;
+  border-right: none;
+}
+.container-fluid .row:last-child{
+  border: 2px solid#1e3063;
+  border-left: none;
+  border-right: none;
+}
+.container-fluid .row2,.row3,.row4,.row5,.row6,.row7,.row8,.row9,.row10,.row11,.row12,.row13,.row14{
+  border: 1px solid#E1E1E1;
+  border-left: none;
+  border-right: none;
+}
+.container-fluid .row2{
+  border-top: none;
+}
+.container-fluid .row13{
+  border-bottom: none;
+}
