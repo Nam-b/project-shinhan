@@ -79,7 +79,7 @@
     line-height:60px;
 }
 
-.lnb_depth_02 ul li a:hover {
+/* .lnb_depth_02 ul li a:hover {
     color:rgba(255,255,255,1);
 }
 
@@ -88,7 +88,7 @@
 .lnb_depth_02 ul li.on a {
     position:relative;
     color:rgba(255,255,255,1);
-}
+} */
 
 .lnb_depth_02 ul li.on a::after {
     content:'';
@@ -145,7 +145,7 @@
 }
 
 .content_start {
-    margin-bottom:80px;
+    padding-bottom:80px;
 }
 
 
