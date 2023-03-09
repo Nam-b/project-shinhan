@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Noto Sans KR', '맑은 고딕', arial, sans-serif !important;
-    min-width:1440px;
+    width:100%;
 }
 
 a {
@@ -11,9 +11,11 @@ a {
 }
 
 .wrap {
-    max-width:1420px;
+    max-width:768px;
     width:100%;
-    min-width:1420px;
+    /* min-width:390px; */
 
     margin:0 auto !important;
+    padding:0 25px;
+    box-sizing: border-box;
 }
